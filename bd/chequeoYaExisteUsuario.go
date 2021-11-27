@@ -2,9 +2,9 @@ package bd
 
 import (
 	"context"
+	"go.mongodb.org/mongo-driver/bson"
 	"time"
 	"twittor/models"
-	"go.mongodb.org/mongo-driver/bson"
 )
 
 func ChequeoYaExisteUsuario(email string) (models.Usuario, bool, string) {

@@ -2,9 +2,9 @@ package bd
 
 import (
 	"context"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"time"
 	"twittor/models"
-	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 /*InsertoRegistro*/
