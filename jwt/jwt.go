@@ -1,7 +1,7 @@
 package jwt
 
 import (
-	jwt "github.com/dgrijalva/jwt-go"
+	jwt "github.com/golang-jwt/jwt"
 	"time"
 	"twittor/models"
 )
@@ -19,6 +19,7 @@ func GeneroJWT(t models.Usuario) (string, error){
 		"sitioweb":         t.SitioWeb,
 		"_id":              t.ID.Hex(),
 		"exp":              time.Now().Add(time.Hour * 24).Unix(),
+		"email":            t.Email,
 	}
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, payload)
 	tokenStr, err := token.SignedString(miClave)
